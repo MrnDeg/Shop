@@ -11,7 +11,17 @@ class Product
   end
 
   def to_str
-    
+
+  end
+
+  def self.from_file(file_path)
+    raise NotImplementedError
+  end
+
+  def update(param)
+    @name = param[:name] if param[:name]
+    @price = param[:price] if param[:price]
+    @quantity = param[:quantity] if param[:quantity]
   end
 
 end
